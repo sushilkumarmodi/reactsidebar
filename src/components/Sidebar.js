@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import '../Sidebar.css'; // Ensure to include your CSS styles
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -26,10 +33,10 @@ const Sidebar = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <a href="#" className="nav-item">
+        <Link className="nav-item" to="/">
             <span className="nav-icon"><i className="fas fa-home"></i></span>
             <span>Home</span>
-          </a>
+        </Link>
         </li>
         <li>
           <a href="#" className="nav-item">
